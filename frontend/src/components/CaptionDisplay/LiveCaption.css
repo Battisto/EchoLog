@@ -1,0 +1,75 @@
+.live-caption-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.caption-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.current-transcript {
+  margin-bottom: 20px;
+  border-left: 4px solid #1976d2;
+}
+
+.current-transcript .pulse {
+  animation: textPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.caption-history {
+  margin-top: 30px;
+}
+
+.captions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.caption-item {
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.caption-item:hover {
+  border-left-color: #1976d2;
+  transform: translateX(5px);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.not-supported-card {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .live-caption-container {
+    padding: 10px;
+  }
+  
+  .caption-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .current-transcript,
+  .caption-item {
+    font-size: 18px !important;
+  }
+}
